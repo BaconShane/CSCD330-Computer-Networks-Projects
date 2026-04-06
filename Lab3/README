@@ -1,0 +1,29 @@
+RUN INSTRUCTIONS
+Enter the directory where lap3.py and test.sh are in
+Start the server by running ./lab3.py
+Then run ./test.sh to test 3 servers and show caching.
+
+QUESTIONS
+
+1. Identify the following in the URL: http://localhost:5000/weather/google.com
+•Domain:localhost
+•Path:/weather/google.com
+•Port:5000
+•Protocol:HTTP
+
+2. Identify the following in the URL: https://translate.google.com/
+•Domain:translate.google.com
+•Subdomain:translate
+•TLD:.com
+•Path:/
+•Protocol:HTTPS
+•Port:443
+
+3. What is a Python decorator?
+A python decorator is a function that modifies or adds to the behavior of another function without
+changing the other functions code. For example it could run code before and after the other function.
+
+4. Is there any problem with your cache implementation? Would your cache
+implementation work in production?
+My cache implementation would not work in production, because the cache grows forever, does not work
+with concurrent requests, and is only stored locally during the current process. 

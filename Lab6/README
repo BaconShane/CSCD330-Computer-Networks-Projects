@@ -1,0 +1,34 @@
+RUN INSTRUCTIONS
+Enter the directory which contains lab6.py and test.sh
+Then run ./test.sh to test 2 websites (httpforever.com and google.com)
+
+EXTRA CREDIT ATTEMPTED
+
+QUESTIONS
+
+1. In lab 4 you sent a GET request using the sockets library. What did the
+sockets library do for you?
+    The sockets library automatically dealt with creating and sending packets.
+
+2. Before you submit this lab, you should check that your pcap contains the
+correct traffic. What program should you use to analyze your pcap? In
+your pcap, did the server send you the complete HTML for the website or
+just a portion of the HTML? (Does the response end with a </html> tag?)
+    I used Wireshark to analyze the pcap file. The response does not end with a </html>
+    tag, but the presence of the Content-Length header suggests the whole file was transmitted.
+
+3. Is your program guaranteed to receive a complete HTML response from
+the website? Why or why not.
+    No, my program is not guaranteed to receive the full HTML response because it uses sr1()
+    which only captures one TCP packet. Since HTTP responses are typically split across multiple
+    TCP segments, my program does not reassemble the full response and may only receive part of the HTML.
+
+4. Can you merge the final ACK of the three-way handshake with the GET
+request? That is, can you merge the two packets into one? If yes, explain
+how such an option might be beneficial.
+    Yes, the final ACK can be merged with the GET request by sending a single packet
+    with ACK and PSH flags set and including the HTTP payload. This is beneficial because it
+    reduces latency and improves efficiency by eliminating one extra packet.
+
+5. Can scapy be used to send other types of packets? If yes, give an example.
+    Yes, scapy can send ICMP, UDP, TCP and more.

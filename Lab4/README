@@ -1,0 +1,26 @@
+RUN INSTRUCTIONS
+Enter the directory where lab4.py and test.sh are in
+Then run ./test.sh to test 3 websites and 1 print to file
+Without the test, run python3 ./lab4.py -p 80 site
+For the parameters -p will print to console and -f will print to a file
+80 is the port and site will be the website i.e. http://google.com
+
+QUESTIONS
+
+1. Why did you have to encode() your request and decode() the response(s)? What do these functions do?
+    Data is transfered over HTTP in bytes not plaintext, so the data sent must first be encoded.
+    Then when recieving the response we must decode it so we can read it. These functions encode / decode
+    plaintext into UTF-8.
+
+2. What changes would you have to make to create a UDP socket?
+    You would have to change the socket type from SOCK_STREAM to SOCK_DGRAM.
+
+3. If you wanted to create a TCP server, what would you have to change?
+    The current connection creates a socket, connects to a remote host, sends a request, and recieves a response.
+    In order to make it TCP, we would have to bind to a local IP and port, Listen for a connection,
+    Accept a connection, recieve data and then send a response back.
+
+4. Can your TCP client create or process HTTPS traffic? What happens if you send a request to port 443?
+    No, because we do not do the right encryption or extra steps involved in an https request. HTTPS expects
+    a TLS handshake, encrypted application data, certificates and a key exchange. If I sent a request to port
+    443 it wouldn't work and I wrould recieve random encrypted binary data.

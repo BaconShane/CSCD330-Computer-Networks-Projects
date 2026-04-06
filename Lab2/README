@@ -1,0 +1,25 @@
+RUN INSTRUCTIONS
+To run, make sure lab2.py and test.sh are in the same directory.
+Make sure you are cd'd into this directory.
+Then run ./test.sh and it should run the test bash on the program.
+
+QUESTIONS
+
+1. What is an API?
+API stands for Application Programming Interface, which is a way to interact with a website
+where you pass information to it and it passes information back.
+
+2. What is a RESTful API? Were the API's we used RESTful?
+A RESTful API is an API that uses standard web protocols such as HTTP to enable communication
+between different software systems. The API's we used were RESTful because they work through HTTP.
+
+3. What is a JSON? Did these API's use JSON?
+JSON stands for JavaScript Object Notation, which allows for easy parsing of returned data. The
+API's we used did use JSON, as the information they returned was JSON formatted, so the data
+was easy to parse and use.
+
+4. What is Bash? Have you ever used Bash?
+Bash is a Unix based scripting language and a command line interpreter. This means it interprets
+and runs the commands entered into the terminal, and allows us to create custom scripts of
+multiple terminal commands using variables. I have used Bash before by just running Linux
+terminal commands and also scripting a bit in my CYBR 303 class.

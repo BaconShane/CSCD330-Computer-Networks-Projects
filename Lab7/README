@@ -1,0 +1,18 @@
+RUN INSTRUCTIONS
+Enter the directory which contains lab7.py and test.sh
+Then run ./test.sh to test 3 websites
+
+EXTRA CREDIT ATTEMPTED
+
+QUESTIONS
+1. Besides TCP, what other protocols can be used?
+ICMP and UDP can be used.
+
+2. When traversing to a website, does the path remain constant every time?
+No, network paths can change due to dynamic routing, load balancing, or network congestion.
+
+3. If a packet dies before reaching the target, what type of packet is returned?
+An ICMP Type 11 (Time Exceeded) packet.
+
+4. Can the whois command be used to discover the owner of an AS number?
+Yes, querying an AS number (e.g., whois AS15169) returns the registration details, including the organization name.
