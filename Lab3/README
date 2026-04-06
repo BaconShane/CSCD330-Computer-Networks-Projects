@@ -1,5 +1,5 @@
 RUN INSTRUCTIONS
-Enter the directory where lap3.py and test.sh are in
+Enter the directory where lab3.py and test.sh are in
 Start the server by running ./lab3.py
 Then run ./test.sh to test 3 servers and show caching.
 
